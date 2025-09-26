@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Worker</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f7f6;
+            color: #333;
+            display: grid;
+            place-items: center;
+            min-height: 90vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #0d47a1;
+            text-align: center;
+        }
+        ul { 
+            list-style-type: none; 
+            padding: 0; 
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        li { 
+            margin-bottom: 12px; 
+            font-size: 1.1em;
+        }
+        .phase { 
+            display: flex; 
+            align-items: center; 
+        }
+        .phase input { 
+            margin-right: 12px; 
+            width: 1.3em;
+            height: 1.3em;
+            accent-color: #4CAF50;
+        }
+        .time { 
+            font-style: italic; 
+            color: #555; 
+            margin-left: 8px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fases del del Service Worker</h1>
+        <ul id="checklist">
+            <li class="phase" id="fase1">
+                <input type="checkbox" disabled>
+                <label>1. Instalando</label>
+                <span class="time"></span>
+            </li>
+            <li class="phase" id="fase2">
+                <input type="checkbox" disabled>
+                <label>2. Instalado</label>
+                <span class="time"></span>
+            </li>
+            <li class="phase" id="fase3">
+                <input type="checkbox" disabled>
+                <label>3. Activación</label>
+                <span class="time"></span>
+            </li>
+            <li class="phase" id="fase4">
+                <input type="checkbox" disabled>
+                <label>4. Activado</label>
+                <span class="time"></span>
+            </li>
+            <li class="phase" id="fase5">
+                <input type="checkbox" disabled>
+                <label>5. Ocioso</label>
+                <span class="time"></span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
